@@ -14,36 +14,36 @@ def debut(): #ouvre la premiere fenetre
     global Entreel,Entreec,Entreet,fen1
     fen1=Tk()
     tex1=Label(fen1, text='nombre de lignes')
-    tex1.pack()
+    #tex1.pack()
     tex1.grid(row =0,column = 0)
     
     tex2=Label(fen1,text='nombre de collones')
-    tex2.pack()
+    #tex2.pack()
     tex2.grid(row=1,column = 0)
     
     tex3=Label(fen1,text="taille d'une cellule")
-    tex3.pack()
+    #tex3.pack()
     tex3.grid(row=2,column = 0)
     
     bou1=Button(fen1, text='OK', command=finir)
-    bou1.pack()
+    #bou1.pack()
     bou1.grid(row =3, column=3)
     
     entrl =StringVar()
     Entreel = Entry(fen1, textvariable=entrl, width = 7, justify = 'center')
-    Entreel.pack()
+    #Entreel.pack()
     Entreel.grid(row=0,column=1) 
     entrl.set("100")
     
     entrc =StringVar()
     Entreec = Entry(fen1, textvariable=entrc, width = 7, justify = 'center')
-    Entreec.pack()
+    #Entreec.pack()
     Entreec.grid(row=1,column=1) 
     entrc.set("100")
     
     entrt=StringVar()
     Entreet = Entry(fen1, textvariable=entrt,  width = 7, justify = 'center')
-    Entreet.pack()
+    #Entreet.pack()
     Entreet.grid(row=2,column=1) 
     entrt.set("5")
     
@@ -202,14 +202,14 @@ def sav():
     #noms=StringVar()
     fen=Tk()
     tex1=Label(fen, text='nom du fichier a sauvegarder')
-    tex1.pack()
+    #tex1.pack()
     tex1.grid(row =0,column = 0)
     nomf = Entry(fen, width = 10, justify = 'center')
-    nomf.pack()
+    #nomf.pack()
     nomf.grid(row=1,column=0)
     
     b= Button(fen,text ='OK',command = savclose)
-    b.pack()
+    #b.pack()
     b.grid(row=10,column=10)
     fen.mainloop()
 
@@ -234,14 +234,14 @@ def reado():
     #noms=StringVar()
     fen2=Tk()
     tex1=Label(fen2, text='nom du fichier a ouvrir')
-    tex1.pack()
+    #tex1.pack()
     tex1.grid(row =0,column = 0)
     nomr = Entry(fen2, width = 10, justify = 'center')
-    nomr.pack()
+    #nomr.pack()
     nomr.grid(row=1,column=0)
     
     b= Button(fen2,text ='OK',command = readclose)
-    b.pack()
+    #b.pack()
     b.grid(row=10,column=10)
     fen2.mainloop()
 
@@ -259,7 +259,7 @@ def createWidgets(root):
     b=Button(f1)
     b["text"]="jouer"
     b["command"]=play
-    b.pack()
+    #b.pack()
     b.grid(row=0, column=0)
     
     
@@ -267,21 +267,21 @@ def createWidgets(root):
     QUIT["text"] = "QUIT"
     QUIT["fg"] = "red"
     QUIT["command"] = root.destroy
-    QUIT.pack()
+    #QUIT.pack()
     QUIT.grid(row=0, column=15)
     
     b3=Button(f1)
     b3["text"]=" jouer ... coups"
     b3["command"]=playn
-    b3.pack()
+    #b3.pack()
     b3.grid(row=0, column=1)
     
     b4=Button(f1,text="ouvrir",command = reado)
-    b4.pack()
+    #b4.pack()
     b4.grid(row=2,column=2)
     
     b5=Button(f1,text="sauvegarder",command = sav)
-    b5.pack()
+    #b5.pack()
     b5.grid(row=2,column=1)
     
     
@@ -289,19 +289,19 @@ def createWidgets(root):
     Entree = Entry(f1, textvariable=entr)     # On définit l'objet Entry qui porte le nom Entree
     Entree["width"]=7
     Entree["justify"]="center"
-    Entree.pack()
+    #Entree.pack()
     Entree.grid(row=1,column=1) 
     entr.set("200")
     
     ck=IntVar()
     chk = Checkbutton(f1, text='editer ?',variable=ck,)
-    chk.pack()
+    #chk.pack()
     chk.grid(row=2,column=10)
     
     eff=Button(f1)
     eff["text"]="effacer"
     eff["command"]=effacer
-    eff.pack()
+    #eff.pack()
     eff.grid(row=2,column=0)
     f1.pack()
     
