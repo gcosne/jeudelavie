@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 from tkinter import *
 
-def finir(): #ferme la fenetre et enregistre les saisie dans les variables
+def finir(): #ferme la fenetre et enregistre les saisies dans les variables
     global nlignes,ncol,taille
     global Entreel,Entreec,Entreet,fen1
     nlignes = int(Entreel.get())
@@ -89,7 +89,7 @@ class Tableau(object): #classe permetant de creer les tables
                 v+=1
             if self.table[rang+1][col-1]=="#" :
                 v+=1
-        elif rang != self.nr-1 and rang !=0 and col == 0 : # si dans le bord de gauche
+        elif rang != self.nr-1 and rang !=0 and col == 0 : #si dans le bord de gauche
             if self.table[rang][col+1]=="#" :
                 v+=1
             if self.table[rang-1][col]=="#" :
@@ -111,7 +111,7 @@ class Tableau(object): #classe permetant de creer les tables
                 v+=1
             if self.table[rang-1][col-1]=="#" :
                 v+=1
-        elif rang != self.nr-1 and col == self.nc-1 and rang !=0: #si derniere collone
+        elif rang != self.nr-1 and col == self.nc-1 and rang !=0: #si derniere colonne
             if self.table[rang][col-1]=="#" :
                 v+=1
             if self.table[rang-1][col]=="#" :
@@ -122,7 +122,7 @@ class Tableau(object): #classe permetant de creer les tables
                 v+=1
             if self.table[rang-1][col-1]=="#" :
                 v+=1
-        elif  rang ==0 and col == 0 : # coin haut gauche
+        elif  rang ==0 and col == 0 : #coin haut gauche
             if self.table[rang][col+1]=="#" :
                 v+=1
             if self.table[rang+1][col]=="#" :
@@ -224,7 +224,7 @@ def read(nomf) :
         file=open(nomf)
         li=file.readlines()
     except IOError:
-        print("le fichier demander n'existe pas")
+        print("le fichier demande n'existe pas")
     for l in range(len(li)) :
         pair=li[l].split(',')
         T.remplir(int(pair[0]),int(pair[1]))
@@ -286,7 +286,7 @@ def createWidgets(root):
     
     
     entr =StringVar()
-    Entree = Entry(f1, textvariable=entr)     # On définit l'objet Entry qui porte le nom Entree
+    Entree = Entry(f1, textvariable=entr)     #On définit l'objet Entry qui porte le nom Entree
     Entree["width"]=7
     Entree["justify"]="center"
     #Entree.pack()
